@@ -1,0 +1,237 @@
+/***************************************************************
+**************************************************************** 
+****************************************************************/
+
+/*БАБЗОВЫЕ*/
+
+html, body {
+    height: 100% !important; /* устанавливает высоту блочных или заменяемых элементов */
+    min-height: 100% !important; /* При использовании процентной записи высота элемента вычисляется в зависимости от высоты
+    родительского элемента. Если родитель не указан явно, то в его качестве выступает окно браузера*/
+    max-height: auto; /* устанавливает высоту исходя из содержимого элемента */
+}
+
+body {
+    padding-top: 50px; /* Устанавливает значение поля от верхнего края содержимого элемента ( значение отступа от верха*/
+    background: rgba(231, 255, 189, 0.42); /* значение цвета заднего фона*/
+}
+
+.clearfix:after{ /* очищение с добавлением свойства content, с помощью которого можем добавлять
+на нашу страницу какой-то контент. В частности, в нашем примере мы добавили элемент типа блок и для него
+задали отмену обтекания.*/
+    content: "";
+    display: block;
+    clear: both;
+}
+
+.selectable{
+    -moz-user-select: text;
+    -o-user-select:text;
+    -khtml-user-select: text;
+    -webkit-user-select: text;
+    -ms-user-select: text;
+    user-select: text;
+}
+
+.margin_top_none{
+    margin-top: 0 !important;
+}
+.paddind_top_none{
+    padding-top: 0 !important;
+}
+
+
+
+/*АНИМАЦИЯ*/
+.anim{
+    -webkit-transition: all .2s ease-out;
+    -moz-transition: all .2s ease-out;
+    -o-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+/*АНИМАЦИЯ*/
+
+/*СООБЩЕНИЕ ПОЛЬЗОВАТЕЛЮ*/
+#user_message{
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background: rgba(231, 255, 189, 0.5);
+    height: 100%;
+    width: 100%;
+    z-index: 99995;
+}
+
+#user_message #message_block{
+    display: block;
+    position: relative;
+    margin: auto;
+    width: 33.33333%;
+    background: #e7ffbd;
+    border: 1px solid #000;
+    overflow: hidden;
+    padding: 20px;
+}
+#user_message #message_block span{
+    display: block;
+    position: relative;
+    margin-bottom: 20px;
+}
+#user_message #message_block div{
+    display: inline-block;
+    min-width: 50px;
+    position: relative;
+    line-height: 30px;
+    padding-right: 10px;
+    padding-left: 10px;
+    border: inherit;
+    cursor: pointer;
+    background: #e7ffbd;
+    text-align: center;
+}
+#user_message #message_block div:hover{
+    background: #000;
+    color: #e7ffbd;
+}
+
+/*СООБЩЕНИЕ ПОЛЬЗОВАТЕЛЮ*/
+
+/***************************************************************
+**************************************************************** 
+***************************************************************/
+
+/*ХЕДЕР*/
+header{
+    display: block;
+    position: fixed;
+    height: 50px;
+    width: 100%;
+    top: 0;
+    left: 0;
+    background: #78db52;
+    z-index: 99900;
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.25); /* тень*/
+    padding-left: 60px;
+    padding-right: 60px;
+}
+header *{
+    display: inline-block;
+    float: left;
+    height: 50px;
+    line-height: 50px;
+    text-align: center;
+    color: #000000;
+    padding-left: 20px;
+    padding-right: 20px;
+    cursor: default;
+}
+header .user_block{
+    display: inline-block;
+    float: right;
+    padding-left: 0;
+    padding-right: 0;
+}
+header .logo{
+    width: 50px;
+    background-image: url(../images/logo.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100%;
+}
+header .list,
+header .user_block .logout,
+header .user_block .login,
+header .add_rec{
+    cursor: pointer;
+    font-weight: bold;
+    border-bottom: 3px solid rgba(0, 0, 0, 0.44);
+}
+header .list:hover,
+header .user_block .logout:hover,
+header .user_block .login:hover,
+header .add_rec:hover{
+    border-bottom: 2px solid rgba(0, 0, 0, 0.44);
+}
+header .list:active,
+header .user_block .logout:active,
+header .user_block .login:active,
+header .add_rec:active{
+    background-color: #e7ffbd;
+    color: #000;
+}
+header .user_block .user_name,
+header .brand{
+    font-weight: 0;
+}
+
+header .add_rec{
+    width: 50px;
+    font-size: 20px;
+}
+/*ХЕДЕР*/
+
+/***************************************************************
+**************************************************************** 
+***************************************************************/
+
+body .content{
+    display: flexbox;
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    padding: 20px;
+}
+
+/***************************************************************
+**************************************************************** 
+***************************************************************/
+
+
+/*ФУТЕР*/
+footer{
+    display: block;
+    position: relative;
+    background: #87ff9e;
+    min-height: 300px;
+    color: #000000;
+    padding: 20px;
+    text-align: center;
+    line-height: 300px;
+    font-size: 100px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

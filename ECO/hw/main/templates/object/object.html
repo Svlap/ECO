@@ -1,0 +1,58 @@
+{% extends '../base.html' %}
+{% load static %}
+
+{% block style %}
+    <link rel="stylesheet" type="text/css" href="{% static 'object/style.css' %}">
+{% endblock %}
+
+{% block content %}
+
+    <div class="container clearfix" id="csrf_token_val" >
+        {% csrf_token %}
+        <div class="left_side clearfix">
+            <div class="info clearfix">
+                <div class="image_block">
+                    <div class="img" style="background-image: url({% static event.imageUrl %})"></div>
+                </div>
+                <div class="text_block">
+                    <h5 class="name">{{ event.name }}</h5>
+                    <div class="attrs_container clearfix">
+                        <label class="title">Атрибуты</label>
+                        <label class="attr">Где проходит конференция {{ event.address }}</label>
+                        <label class="attr">Время начала конференции{{ event.time }}</label>
+                    </div>
+                    <div class="desc_container">
+                        <label class="title">Что мы будем обсуждать</label>
+                        <p class="desc">
+                            {{ event.desc }}
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="right_side clearfix">
+            <div class="control_info_board" id="right_side_bar">
+                <div class="list_users_block">
+                    <h5 class="block_name">Кто еще планирует прийти:</h5>
+                    <div class="list_users_container" id="users_list_container">
+                    </div>
+                </div>
+               
+               {% if authorized %}
+                <div class="control clearfix">
+                    <h5 class="block_name">Ваш статус</h5>
+                    <div class="status" status-val="{{ status }}" id="user_status" >Согласиться</div>
+                    <div id="change_status_button" class="anim">Изменить</div>
+                </div>
+                {% endif %}
+              
+            </div>
+        </div>
+    </div>
+    
+{% endblock %}
+
+{% block scripts %}
+    <script type="text/javascript" src="{% static 'object/script.js' %}">
+    </script>
+{% endblock %}

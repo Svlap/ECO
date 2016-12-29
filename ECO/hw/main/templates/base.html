@@ -1,0 +1,78 @@
+{% load static %}
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Event Dream</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'general/reset.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'general/fonts.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'general/style.css' %}">
+
+    {% block style %}
+    {% endblock %}
+</head>
+<body>
+
+    <!-- ************************************************ -->
+    <header class="clearfix">
+        <div class="logo"></div>
+        <div class="brand">Event Dream</div>
+        <a href="{% url 'main_page' %}" class="list anim">List</a>
+        {% if authorized %}
+            <div class="add_rec anim" id="show_modal_window">+</div>
+            <div class="user_block clearfix">
+                <div class="user_name">{{ user.name }}</div>
+                <a class="logout anim" href="{% url 'login_url' %}">Log out</a>
+            </div>
+        {% else %}
+            <div class="user_block clearfix">
+                <div class="user_name">Guest</div>
+                <a href="{% url 'login_url' %}" class="login anim">Log in</a>
+            </div>
+        {% endif %}
+    </header>
+    <!-- ************************************************ -->
+
+    <!-- ************************************************ -->
+    <div id="user_message">
+        <div id="message_block">
+            <span class="message">Test text</span>
+            <div class="anim close">Ок</div>
+        </div>
+    </div>
+    <!-- ************************************************ -->
+
+    <!-- ************************************************ -->
+    <div class="content clearfix">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <!-- ************************************************ -->
+    <footer>
+        #FOOTER
+    </footer>
+    <!-- ************************************************ -->
+</body>
+<script type="text/javascript" src="{% static 'general/jquery.js' %}">
+</script>
+<script type="text/javascript" src="{% static 'general/jquery.sticky.js' %}">
+</script>
+{% block scripts %}
+{% endblock %}
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

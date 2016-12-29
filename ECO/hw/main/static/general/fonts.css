@@ -1,0 +1,42 @@
+/*DIN ROUND********************************************************************
+#############################################################################*/
+
+/*DIN LIGHT*/
+@font-face {
+    font-family: 'din';
+    src: url('../fonts/DINRoundProLight.eot');
+    src: local('☺ᔛᔜᔝᔞᔟᔠᔡᔢᔣᔤ☺'), 
+         url('../fonts/DINRoundProLight.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DINRoundProLight.woff') format('woff'),
+         url('../fonts/DINRoundProLight.ttf') format('truetype'),
+         url('../fonts/DINRoundProLight.svg') format('svg');
+    font-weight: 300;
+    font-style: normal;
+}
+
+/*DIN NORMAL*/
+@font-face {
+    font-family: 'din';
+    src: url('../fonts/DINRoundProNormal.eot');
+    src: local('☺ᔛᔜᔝᔞᔟᔠᔡᔢᔣᔤ☺'), 
+         url('../fonts/DINRoundProNormal.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DINRoundProNormal.woff') format('woff'),
+         url('../fonts/DINRoundProNormal.ttf') format('truetype'),
+         url('../fonts/DINRoundProNormal.svg') format('svg');
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*DIN BOLD*/
+@font-face {
+    font-family: 'din';
+    src: url('../fonts/DINRoundProBold.eot');
+    src: local('☺ᔛᔜᔝᔞᔟᔠᔡᔢᔣᔤ☺'), 
+         url('../fonts/DINRoundProBold.eot?#iefix') format('embedded-opentype'),
+         url('../fonts/DINRoundProBold.woff') format('woff'),
+         url('../fonts/DINRoundProBold.ttf') format('truetype'),
+         url('../fonts/DINRoundProBold.svg') format('svg');
+    font-weight: bold;
+    font-style: normal;
+}
+/*#############################################################################*/
