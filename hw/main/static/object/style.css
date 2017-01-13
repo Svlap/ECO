@@ -1,0 +1,198 @@
+.container{
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 500px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+.container .left_side,
+.container .right_side{
+    display: block;
+    position: relative;
+    float: left;
+}
+.container .left_side{
+    width: calc(100% - 320px);
+    margin-right: 20px;
+}
+.container .right_side{
+    
+    width: 300px;
+}
+
+/*left side*/
+.container .left_side .info{
+    display: block;
+    position: relative;
+    background-color: #78db52;
+    box-shadow: 0 0 5px rgba(0,0,0, .15);
+}
+
+.container .left_side .info .image_block{
+    display: block;
+    position: relative;
+    float: left;
+    padding: 20px;
+}
+.container .left_side .info .image_block .img{
+    display: block;
+    position: relative;
+    height: 300px;
+    width: 300px;
+    background-color: #e7ffbd;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.container .left_side .info .text_block{
+    display: block;
+    position: relative;
+    float: left;
+    width: calc(100% - 340px);
+    padding-right: 20px;
+}
+.container .left_side .info .text_block .name{
+    display: block;
+    position: relative;
+    font-size: 40px;
+    line-height: 35px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.container .left_side .info .text_block .attrs_container,
+.container .left_side .info .text_block .desc_container{
+    display: block;
+    position: relative;
+    margin-top: 20px;
+}
+.container .left_side .info .text_block .attrs_container .title,
+.container .left_side .info .text_block .desc_container .title{
+    display: block;
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.container .left_side .info .text_block .attrs_container .attr{
+    display: inline-block;
+    position: relative;
+    margin-top: 10px;
+    margin-right: 10px;
+    height: 50px;
+    line-height: 50px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #78db52;
+    color: #000000;
+}
+
+.container .left_side .info .text_block .desc_container .desc{
+    display: block;
+    position: relative;
+    font-size: 16px;
+    margin-top: 5px;
+    padding-bottom: 20px;
+}
+
+
+/*right side*/
+.container .right_side .control_info_board{
+    display: block;
+    position: relative;
+    background-color: #78db52;
+    padding: 20px;
+}
+
+.container .right_side .control_info_board .list_users_block{
+    display: block;
+    position: relative;
+}
+.container .right_side .control_info_board .list_users_block .block_name,
+.container .right_side .control_info_board .control .block_name{
+    display: block;
+    position: relative;
+    font-size: 20px;
+    font-weight: bold;
+    color: #000000;
+}
+.container .right_side .control_info_board .list_users_block .list_users_container{
+    display: block;
+    position: relative;
+    max-height: 200px;
+    overflow-y: auto;
+    margin-top: 10px;
+}
+.container .right_side .control_info_board .list_users_block .list_users_container .user_name{
+    display: block;
+    position: relative;
+    color: #fff;
+    line-height: 30px;
+}
+
+.container .right_side .control_info_board .control{
+    display: block;
+    position: relative;
+    margin-top: 20px;
+}
+.container .right_side .control_info_board .control .status{
+    display: block;
+    position: relative;
+    height: 50px;
+    margin-top: 10px;
+    line-height: 46px;
+    padding-left: 20px;
+    padding-right: 20px;
+    color: #31ffcc;
+    font-size: 16px;
+    border: 2px dashed #fff;
+    text-align: center;
+    cursor: default;
+}
+.container .right_side .control_info_board .control #change_status_button{
+    display: inline-block;
+    position: relative;
+    padding-left: 20px;
+    padding-right: 20px;
+    line-height: 48px;
+    height: 50px;
+    border: 2px solid #fff;
+
+    margin-top: 20px;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    float: right;
+}
+.container .right_side .control_info_board .control #change_status_button:hover{
+    background-color: #e7ffbd;
+    color: #000000;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
