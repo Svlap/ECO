@@ -112,7 +112,7 @@ class ObjectListView(BaseView):
             request,
             'main/main.html',
             context={
-                'name': 'Events',
+                'name': '', # здесь, если захотим, можно что-то написать ( к зашлавию)
                 'events': ObjectListView.get_page_dict(0),
                 'add_form': AddEventForm(),
             }
@@ -133,7 +133,7 @@ class ObjectListView(BaseView):
         if f is None:
             file_url = r'images/default.jpg'
         else:
-            file_url = r'images/pokemons/%d%s' % (event.id, '.jpg')
+            file_url = r'images/im/%d%s' % (event.id, '.jpg')
             fs = FileSystemStorage()
             filename = fs.save('main/static/' + file_url, File(f))
 
@@ -146,7 +146,7 @@ class ObjectListView(BaseView):
 class ObjectView(BaseView):
     def get(self, request, event_id):
         obj = get_object_or_404(Event, id=event_id)
-        id = reuqest.user.id
+        id = request.user.id
 
         return super().render(
             request,

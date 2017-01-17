@@ -54,9 +54,9 @@ function ajaxLoadUsers(state){
             $('#users_list_container').html(response);
 
             if (currentState == 'True') {
-                $('#user_status').text('Accepted');
+                $('#user_status').text('Я пойду');
             }else{
-                $('#user_status').text('False accepted');
+                $('#user_status').text('Я не иду');
             }
 
         },

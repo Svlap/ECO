@@ -7,8 +7,9 @@ from .models import Event
 class AuthForm (AuthenticationForm):
     username = forms.CharField(
         required=True,
+        label='Имя пользователя',
         widget=forms.widgets.TextInput(
-            attrs={'placeholder': 'Username'}
+            attrs={'placeholder': 'Ваше имя'}
         )
     )
 
@@ -16,8 +17,9 @@ class AuthForm (AuthenticationForm):
 
     password = forms.CharField(
         required=True,
+        label='Пароль',
         widget=forms.widgets.PasswordInput(
-            attrs={'placeholder': 'Password'}
+            attrs={'placeholder': 'Пароль'}
         )
     )
 
@@ -29,24 +31,25 @@ class AuthForm (AuthenticationForm):
 class RegistrationForm (UserCreationForm):
     username = forms.CharField(
         required=True,
+        label='Имя пользователя',
         widget=forms.widgets.TextInput(
-            attrs={'placeholder': 'Username'}
+            attrs={'placeholder': 'Ваше имя'}
         )
     )
 
     password1 = forms.CharField(
         required=True,
-        label='Password',
+        label='Пароль',
         widget=forms.widgets.PasswordInput(
-            attrs={'placeholder': 'Password'}
+            attrs={'placeholder': 'Пароль'}
         )
     )
 
     password2 = forms.CharField(
         required=True,
-        label='Password Confirmation',
+        label='Проверка пароля',
         widget=forms.widgets.PasswordInput(
-            attrs={'placeholder': 'Password Confirmation'}
+            attrs={'placeholder': 'введите повторно пароль'}
         )
     )
 
@@ -59,13 +62,13 @@ class AddEventForm(forms.Form):
     name = forms.CharField(
         required=True,
         widget=forms.widgets.TextInput(
-            attrs={'placeholder': 'Name', 'id': 'new_rec_name'}
+            attrs={'placeholder': 'Название', 'id': 'new_rec_name'}
         )
     )
 
     address = forms.CharField(
         widget=forms.widgets.TextInput(
-            attrs={'placeholder': 'Address', 'id': 'new_rec_address'}
+            attrs={'placeholder': 'Адрес', 'id': 'new_rec_address'}
         )
     )
 
@@ -85,9 +88,9 @@ class AddEventForm(forms.Form):
     desc = forms.CharField(
         required=True,
         widget=forms.widgets.Textarea(
-            attrs={'placeholder': 'Description', 'id': 'new_rec_desc'}
+            attrs={'placeholder': 'Описание', 'id': 'new_rec_desc'}
         ),
-        error_messages={'required': 'Please input description'},
+        error_messages={'required': 'Пожалуйста, расскажите о мероприятии'},
         label='Sport'
     )
 

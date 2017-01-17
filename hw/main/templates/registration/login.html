@@ -7,23 +7,23 @@
 
 {% block content %}
     <div class="reg_login_container clearfix">
-        <h1>Welcome</h1>
+        <h1>Добро пожаловать на сайт "ЭКОБИОНИКА"! </h1>
         <div class="reg_block clearfix">
-            <h5 class="block_name">Registration</h5>
+            <h5 class="block_name">Вы еще не с нами?</h5>
             <form name="registration_form" class="clearfix" 
             id="registration_form">
                 {% csrf_token %}
                 {{ registration_form }}
-                <div id="reg_user">Register</div>
+                <div id="reg_user">Присоединиться</div>
             </form>
         </div>
         <div class="login_block clearfix">
-            <h5 class="block_name">Log in</h5>
+            <h5 class="block_name">Я уже с Вами!</h5>
             <form method="POST" name="login_form" class="clearfix"
             id="login_form">
                 {% csrf_token %}
                 {{ login_form }}
-                <div id="login_user">Log in</div>
+                <div id="login_user">Войти</div>
             </form>
         </div>
     </div>

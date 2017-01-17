@@ -13,8 +13,8 @@
                 {{ event.desc }}
             </p>
         </div>
-        <a class="view anim" href="{% url 'single_object' event_id=event.id %}" target="_blank">Давайте что-нибудт напишем</a>
+        <a class="view anim" href="{% url 'single_object' event_id=event.id %}" target="_blank">Узнать подробнее</a>
     </div>
 {% empty %}
-N/A
+
 {% endfor %}

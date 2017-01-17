@@ -18,15 +18,15 @@
 .container_list{
     display: block;
     position: relative;
-    margin: 0 auto;
+    margin-right: 10px; /* margin: 0 auto */
     max-width: 1100px;
     min-width: 800px;
-    left: -135px; 
+    left: -135px; /* -135px */
 }
 
 @media screen and (max-width: 1420px) {
     .container_list{
-        left: 0; 
+        left: 70px; /*сдвиг всей конструкции вправо*/
     }
 }
 
@@ -34,27 +34,35 @@
     display: block;
     position: relative;
     float: left;
+
 }
 
 
 .container_list .col.left{
     margin-right: 20px;
-    width: 250px;  
+    width: 250px;
+    right: 35px; /* сдвиг 2-х центральных*/
 }
 
 .container_list .col.left .ext_info{
     display: block;
-    position: relative;
-    background: #e7ffbd;
+    position: static;
+    height: 450px; /* Высота блока */
+    width: 250px; /* Ширина блока */
+    background-image: url("../images/logo.png"); /* добавили картинку - ее не было*/
+    background-color: #e7ffbd;
+    background-size: 90%;
+    background-repeat: no-repeat;
+    background-position: bottom;
     padding: 20px;   
 }
 
 .container_list .col.left .ext_info h3{
     display: block;
     position: relative;
-    color: #fff;
-    font-size: 50px;
-    border-bottom: 1px solid #fff;  
+    color: #000000;
+    font-size: 40px;
+    border-bottom: 1px solid rgba(118, 118, 118, 0.54);
     cursor: default;
 }
 
@@ -68,7 +76,7 @@
 }
 
 .container_list .col.right{
-    width: calc(100% - 270px);
+    width: calc(100% - 270px); /* width: calc(100% - 270px) */
 }
 
 
@@ -76,7 +84,7 @@
     padding: 20px;
     display: block;
     position: relative;
-    background: #e7ffbd;
+    background-color: #e7ffbd;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.11);
     margin-bottom: 20px;
 }
@@ -86,11 +94,10 @@
     display: block;
     position: relative;
     float: left;
-    width: 300px;
+    width: 300px;/* касается картинки темы в листе */
     height: 300px;
-    background: #e7ffbd;
+    background-color: #e7ffbd;
     box-shadow: 0 0 5px rgba(0,0,0,.15);
-
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
@@ -102,7 +109,7 @@
     position: relative;
     width: calc(100% - 300px);
     float: left;
-    padding-left: 20px;
+    padding-left: 10px; /* касается положения надписей у тевы в листе */
     min-height: 250px;
 }
 
@@ -110,21 +117,21 @@
     display: block;
     position: relative;
     font-weight: bold;
-    font-size: 30px;
+    font-size: 30px; /* касается размера надписи названия темв в листе */
     cursor: default;
 }
 
 .container_list .col.right .list_obj .data .attr_block{
     display: block;
     position: relative;
-    padding-top: 10px;
+    padding-top: 10px;/* касается положения надписей у тевы в листе */
     padding-bottom: 10px;
 }
 
 .container_list .col.right .list_obj .data .attr_block label{
     display: inline-block;
     position: relative;
-    background: #78db52;
+    background-color: #78db52;
     line-height: 20px;
     font-size: 14px;
     padding: 10px;
@@ -149,7 +156,7 @@
     border: 1px solid #000;
     padding-left: 20px;
     padding-right: 20px;
-    background: #e7ffbd;
+    background-color: #e7ffbd;
     cursor: pointer;
     line-height: 50px;
     font-size: 20px;
@@ -157,7 +164,7 @@
 }
 
 .container_list .col.right .list_obj .view:hover{
-   background: #e7ffbd;
+   background-color: #e7ffbd;
    color: #000;
 }
 

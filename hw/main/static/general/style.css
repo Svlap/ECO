@@ -134,7 +134,7 @@ header .user_block{
 }
 header .logo{
     width: 50px;
-    background-image: url(../images/logo.png);
+    background-image: url(../images/logo_1.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: 100%;
@@ -195,7 +195,7 @@ footer{
     background: #87ff9e;
     min-height: 300px;
     color: #000000;
-    padding: 20px;
+    padding: 10px; /* 20 */
     text-align: center;
     line-height: 300px;
     font-size: 100px;
