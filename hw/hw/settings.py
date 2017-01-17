@@ -19,7 +19,11 @@ SECRET_KEY = '$6lv+8jyl^u-5-47kd8icet55jw-9a)qsn*jki$(3ewdq8684a'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = [
+	'194.87.95.176',
+	'klimov.org',
+]
+
 
 
 # Application definition
