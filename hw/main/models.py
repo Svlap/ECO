@@ -7,10 +7,10 @@ default_image_path = 'images/default.jpg'
 
 
 class Event(models.Model):
-    name = models.CharField(max_length=50)
-    address = models.CharField(max_length=100)
+    name = models.CharField(max_length=256)
+    address = models.CharField(max_length=500)
     time = models.DateTimeField(default=timezone.now)
-    desc = models.CharField(max_length=2000, null=True)
+    desc = models.CharField(max_length=4000, null=True)
     imageUrl = models.CharField(
         default=default_image_path,
         max_length=256,
