@@ -22,6 +22,7 @@ DEBUG = True
 ALLOWED_HOSTS = [
 	'194.87.95.176',
 	'klimov.org',
+    '127.0.0.1',
 ]
 
 
