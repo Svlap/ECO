@@ -25,5 +25,6 @@ urlpatterns = [
     url(r'^event/(?P<event_id>[0-9]+)', views.ObjectView.as_view(), name='single_object'),
 
     url(r'^page/(?P<page_id>[0-9]+)', views.page_request, name='page_request'),
+    url(r'^history$', views.ObjectListView_history.as_view(), name='main_page_history'),
     url(r'^$', views.ObjectListView.as_view(), name='main_page'),
 ]

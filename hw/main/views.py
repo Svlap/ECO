@@ -9,7 +9,7 @@ from django.views import View
 from django.http import HttpResponse, JsonResponse
 
 # local imports
-from .models import Event
+from .models import Event, EventPrevious
 from .forms import AuthForm, RegistrationForm, AddEventForm
 
 from django.core.files import File
@@ -140,6 +140,61 @@ class ObjectListView(BaseView):
         event.imageUrl = file_url
         event.save()
         return redirect('single_object', event_id=event.id)
+
+    # Main Page view, lists all objects
+class ObjectListView_history(BaseView):
+    objOnList = 10
+
+    def get_page_dict(page_id):
+        page_id = int(page_id)
+        st_pos = len(EventPrevious.objects.all()) - ObjectListView_history.objOnList * page_id
+        end = st_pos if st_pos > 0 else 0
+        if end > ObjectListView_history.objOnList:
+            start = end - ObjectListView_history.objOnList
+        else:
+            start = 0
+
+        # need to cut description
+        all = EventPrevious.objects.all()[start: end: -1]
+
+        for i in all:
+            if len(i.desc) > 200:
+                i.desc = i.desc[:200] + '...'
+        return all
+
+    def get(self, request):
+        return super().render(
+            request,
+            'main/main.html',
+            context={
+                'name': '', # здесь, если захотим, можно что-то написать ( к зашлавию)
+                'events': ObjectListView_history.get_page_dict(0),
+                'add_form': AddEventForm(),
+            }
+        )
+
+    # Страница добавления объекта
+    def post(self, request):
+        form = AddEventForm(request.POST)
+
+        if not form.is_valid():
+            return JsonResponse(form.errors)
+
+        EventPrevious = form.fill_object()
+
+        # saving file
+        f = request.FILES.get("image")
+
+        if f is None:
+            file_url = r'images/default.jpg'
+        else:
+            file_url = r'images/im/%d%s' % (EventPrevious.id, '.jpg')
+            fs = FileSystemStorage()
+            filename = fs.save('main/static/' + file_url, File(f))
+
+        EventPrevious.imageUrl = file_url
+        EventPrevious.save()
+        return redirect('single_object', event_id=EventPrevious.id)
 
 
 # View
