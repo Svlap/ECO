@@ -11,11 +11,12 @@ class Event(models.Model):
     address = models.CharField(max_length=500)
     time = models.DateTimeField(default=timezone.now)
     desc = models.CharField(max_length=4000, null=True)
-    imageUrl = models.CharField(
+    imageUrl = models.ImageField(
+        upload_to='static/images/im',
+        verbose_name='Картинка',
         default=default_image_path,
         max_length=256,
-        null=False
-    )
+        null=False)
     participation = models.ManyToManyField(User)
 
     def __str__(self):
@@ -27,11 +28,12 @@ class EventPrevious(models.Model):
     address = models.CharField(max_length=500)
     time = models.DateTimeField(default=timezone.now)
     desc = models.CharField(max_length=4000, null=True)
-    imageUrl = models.CharField(
+    imageUrl = models.ImageField(
+        upload_to='static/images/im',
+        verbose_name='Картинка',
         default=default_image_path,
         max_length=256,
-        null=False
-    )
+        null=False)
     participation = models.ManyToManyField(User)
 
     def __str__(self):
